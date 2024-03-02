@@ -19,7 +19,7 @@ class FuncionarioController extends Controller
 
     public function cadFuncionario(Request $request){
         $dadosValidos = $request->validate([
-            'nome' => 'string|required',
+            'nome'   => 'string|required',
             'funcao' => 'string|required'
         ]);
 

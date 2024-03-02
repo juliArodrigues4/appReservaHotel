@@ -50,7 +50,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Pesquisar</a></li>
               <li><a class="dropdown-item" href="#">Alterar</a></li>
-              <li><a class="dropdown-item"href="#">Cadastrar</li>
+              <li><a class="dropdown-item" href="{{'/cadastro-quarto'}}">Cadastrar</li>
               <li><a class="dropdown-item" href="#">Deletar</a></li>
             </ul>
           </li>
@@ -61,7 +61,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Pesquisar</a></li>
               <li><a class="dropdown-item" href="#">Alterar</a></li>
-              <li><a class="dropdown-item"href="#">Cadastrar</li>
+              <li><a class="dropdown-item"href="{{'/cadastro-reserva'}}">Cadastrar</li>
               <li><a class="dropdown-item" href="#">Deletar</a></li>
             </ul>
           </li>
