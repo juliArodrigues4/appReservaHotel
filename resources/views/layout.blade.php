@@ -26,10 +26,8 @@
               Cliente
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="">Pesquisar</a></li>
-              <li><a class="dropdown-item" href="">Alterar</a></li>
+              <li><a class="dropdown-item" href="{{'/gerenciar-cliente'}}">Gerenciar</a></li>
               <li><a class="dropdown-item"href="{{'/cadastro-cliente'}}">Cadastrar</li>
-              <li><a class="dropdown-item" href="#">Deletar</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -37,10 +35,8 @@
           Funcionário
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="">Pesquisar</a></li>
-              <li><a class="dropdown-item" href="#">Alterar</a></li>
+              <li><a class="dropdown-item" href="{{'/gerenciar-funcionario'}}">Gerenciar</a></li>
               <li><a class="dropdown-item"href="{{'/cadastro-funcionario'}}">Cadastrar</li>
-              <li><a class="dropdown-item" href="#">Deletar</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -48,10 +44,8 @@
               Quarto
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-              <li><a class="dropdown-item" href="#">Alterar</a></li>
+              <li><a class="dropdown-item" href="{{'/gerenciar-quarto'}}">Gerenciar</a></li>
               <li><a class="dropdown-item" href="{{'/cadastro-quarto'}}">Cadastrar</li>
-              <li><a class="dropdown-item" href="#">Deletar</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -59,10 +53,8 @@
               Reserva
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-              <li><a class="dropdown-item" href="#">Alterar</a></li>
+              <li><a class="dropdown-item" href="{{'/gerenciar-reservas'}}">Gerenciar</a></li>
               <li><a class="dropdown-item"href="{{'/cadastro-reserva'}}">Cadastrar</li>
-              <li><a class="dropdown-item" href="#">Deletar</a></li>
             </ul>
           </li>
           <li class="nav-item">
