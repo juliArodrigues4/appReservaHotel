@@ -2,14 +2,15 @@
 @section('content')
 
 <section class="container m-5">
+  <h1 class="text-center">Gerenciar dados do cliente</h1>
   <div class="container m-5">
     <form >
       <div class="row center">
         <div class="col">
-          <input type="text" id="marca" name="marca" class="form-control" placeholder="Digite a Marca" aria-label="First name">
+          <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o nome do funcionário" aria-label="First name">
         </div>
         <div class="col">
-          <button type="submit" class="btn btn-info">xxxxxxxxxxxxxxx</button>
+          <button type="submit" class="btn btn-info">Buscar</button>
         </div>
       </div>
     </form>
@@ -19,8 +20,8 @@
     <thead>
       <tr>
         <th scope="col">Código</th>
-        <th scope="col">Celular</th>
-        <th scope="col">Marca</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
         <th scope="col">Editar</th>
         <th scope="col">Excluir</th>
       </tr>
@@ -36,7 +37,6 @@
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
-        xx
         <td>
          xxx
         </td>

@@ -10,7 +10,7 @@ class QuartoController extends Controller
 {
     
     public function showHome() {
-        return viw("home");
+        return view("home");
     }
 
     public function showFormAgendamento(Request $request) {
@@ -20,12 +20,13 @@ class QuartoController extends Controller
     public function cadQuarto(Request $request) {
        
         $dadosValidos = $request->validate([
-            'numero' => 'integer|required',
-            'tipo'   => 'string|required',
-            'valor'  => 'numeric|required'
+            'numeroQuarto' => 'integer|required',
+            'tipoQuarto'   => 'string|required',
+            'valorDiaria'  => 'numeric|required'
         ]);
+
         Quarto::create($dadosValidos);
-        return Redirect::route('home');
+       return Redirect::route('home');
     }
 
     public function gerenciarQuarto(){

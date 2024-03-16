@@ -11,7 +11,7 @@ class Quarto extends Model
 
     protected $fillable = [
         'numeroQuarto',
-        'tipoQauarto',
+        'tipoQuarto',
         'valorDiaria'
     ];
 

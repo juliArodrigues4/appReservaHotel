@@ -9,20 +9,27 @@ use App\Http\Controllers\ReservaController;
 
 Route::get('/', [ClienteController::class, 'showHome'])->name('home');
 
-Route::get('/cadastro-cliente', [ClienteController::class, 'showFormularioCadastro'])->name('show-form-cadastro');
-Route::post('/cadastro-cliente', [ClienteController::class, 'cadastrarCliente'])->name('envia-bd-cliente');
-Route::get('/gerenciar-cliente', [ClienteController::class, 'gerenciarCliente'])->name('gerenciar-cliente');
+// rotas da pag. cliente
+Route::get('/cadastro-cliente',        [ClienteController::class, 'showFormularioCadastro'])->name('show-form-cadastro');
+Route::post('/cadastro-cliente',       [ClienteController::class, 'cadastrarCliente'])->name('envia-bd-cliente');
+Route::get('/gerenciar-cliente',       [ClienteController::class, 'gerenciarCliente'])->name('gerenciar-cliente');
+Route::get('/alterar-clinte',          [ClienteController::class, 'mostrarClienteId'])->name('mostrar-clinte');
+Route::put('/alterar-cliente/{id}',   [ClienteController::class,'alterarClienteBanco'])->name('alterar-cliente');
+Route::delete('/apagar-cliente/{id}', [ClienteController::class,'destroy'])->name('apagar-cliente');
 
 
 
-Route::get('/cadastro-funcionario', [FuncionarioController::class, 'showFormFuncionario'])->name('show-form-cad-funcionario');
+// rotas da pag. funcionario
+Route::get('/cadastro-funcionario',  [FuncionarioController::class, 'showFormFuncionario'])->name('show-form-cad-funcionario');
 Route::post('/cadastro-funcionario', [FuncionarioController::class, 'cadFuncionario'])->name('envia-bd-funcionario');
 Route::get('/gerenciar-funcionario', [FuncionarioController::class, 'gerenciarFuncionario'])->name('gerenciar-funcionario');
 
-Route::get('/cadastro-quarto', [QuartoController::class, 'showFormAgendamento'])->name('show-form-cad-agendamento');
+// rotas da pag. quarto
+Route::get('/cadastro-quarto',  [QuartoController::class, 'showFormAgendamento'])->name('show-form-cad-agendamento');
 Route::post('/cadastro-quarto', [QuartoController::class, 'cadQuarto'])->name('envia-bd-quarto');
 Route::get('/gerenciar-quarto', [QuartoController::class, 'gerenciarQuarto'])->name('gerenciar-quarto');
 
-Route::get('/cadastro-reserva', [ReservaController::class, 'showFormReserva'])->name('show-form-cad-reserva');
-Route::post('/cadastro-reserva', [ReservaController::class, 'cadReserva'])->name('envia-bd-reserva');
+// rotas da pag. reservas
+Route::get('/cadastro-reserva',   [ReservaController::class, 'showFormReserva'])->name('show-form-cad-reserva');
+Route::post('/cadastro-reserva',  [ReservaController::class, 'cadReserva'])->name('envia-bd-reserva');
 Route::get('/gerenciar-reservas', [ReservaController::class, 'gerenciarReservas'])->name('gerenciar-reservas');

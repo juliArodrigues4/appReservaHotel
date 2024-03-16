@@ -2,11 +2,11 @@
 @section('content')
 
 <section class="container mt-5"> 
-  <form class="row g-3" method="Post" action="{{route('envia-bd-quarto')}}">
+<form class="row g-3" method="Post" action="{{route('envia-bd-quarto')}}">
     @csrf
     <div class="col-md-10">
-      <label for="inputNumeroQuarto" class="form-label">Número do quarto:</label>
-      <input type="text" class="form-control" id="inputNumeroQuarto" name="numeroQuarto" placeholder="A12">
+      <label for="inputnumeroQuarto" class="form-label">Número do quarto:</label>
+      <input type="text" class="form-control" id="inputnumeroQuarto" name="numeroQuarto" placeholder="12">
     </div>
 
     <div class="col-md-10">
@@ -19,8 +19,8 @@
     </div>
 
     <div class="col-md-10">
-      <label for="inputValorQuarto" class="form-label">Valor:</label>
-      <input type="number" class="form-control" id="inputValorQuarto" name="valorDiaria">
+      <label for="inputvalorQuarto" class="form-label">Valor:</label>
+      <input type="text" class="form-control" id="inputvalorQuarto" name="valorDiaria">
     </div>
 
     <div class="col-12 mt-5">
