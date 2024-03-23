@@ -41,7 +41,7 @@
             <form method="post" action="{{route('apagar-cliente', $registrosClientesLoop->id)}}">
               @method('delete')
               @csrf
-              <button type="submit" class="btn btn-danger"> X </button>
+              <button type="submit" class="btn btn-danger"> Deletar Cliente </button>
             </form>
         </td>
       </tr>

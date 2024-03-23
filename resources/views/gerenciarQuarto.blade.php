@@ -2,6 +2,7 @@
 @section('content')
 
 <section class="container m-5">
+  <h1 class="text-center">Gerenciar dados dos quartos</h1>
   <div class="container m-5">
     <form >
       <div class="row center">
@@ -26,21 +27,25 @@
       </tr>
     </thead>
     <tbody>
-     
+    @foreach($registrosQuarto as $registrosQuartoLoop )
       <tr>
-        <th scope="row">01</th>
-        <td>119897-999</td>
-        <td>Samsung</td>
+        <th scope="row">{{$registrosQuartoLoop->id}}</th>
+        <td>{{$registrosQuartoLoop->numeroQuarto}}</td>
+        <td>{{$registrosQuartoLoop->tipoQuarto}}</td>
         <td>
           <a href="">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
         <td>
-         xxx
+            <form method="post" action="{{route('apagar-quarto', $registrosQuartoLoop->id)}}">
+              @method('delete')
+              @csrf
+              <button type="submit" class="btn btn-danger"> Deletar </button>
+            </form>
         </td>
       </tr>
-   
+    @endforeach
     </tbody>
   </table>
 </section>

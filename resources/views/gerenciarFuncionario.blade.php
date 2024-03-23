@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
 
-<section class="container m-5">
-  <h1 class="text-center">Gerenciar dados do cliente</h1>
+<section class="container mr-20 ml-20 mt-50">
+  <h1 class="text-center">Gerenciar dados do Funcionario</h1>
   <div class="container m-5">
     <form >
       <div class="row center">
@@ -21,27 +21,31 @@
       <tr>
         <th scope="col">Código</th>
         <th scope="col">Nome</th>
-        <th scope="col">Email</th>
+        <th scope="col">Função</th>
         <th scope="col">Editar</th>
         <th scope="col">Excluir</th>
       </tr>
     </thead>
     <tbody>
-     
+     @foreach($registrosFuncionario as $registrosFuncionarioLoop)
       <tr>
-        <th scope="row">01</th>
-        <td>119897-999</td>
-        <td>Samsung</td>
+        <th scope="row">{{$registrosFuncionarioLoop->id}}</th>
+        <td>{{$registrosFuncionarioLoop->nome}}</td>
+        <td>{{$registrosFuncionarioLoop->funcao}}</td>
         <td>
           <a href="">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
         <td>
-         xxx
+          <form method="post" action="{{route('apagar-funcionario', $registrosFuncionarioLoop->id)}}">
+            @method('delete')
+            @csrf
+            <button type="submit" class="btn btn-danger"> Deletar funcionário </button>
+          </form>
         </td>
       </tr>
-   
+      @endforeach
     </tbody>
   </table>
 </section>

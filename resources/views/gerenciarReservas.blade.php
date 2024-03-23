@@ -2,6 +2,7 @@
 @section('content')
 
 <section class="container m-5">
+  <h1 class="text-center">Gerenciar dados das reservas</h1>
   <div class="container m-5">
     <form >
       <div class="row center">
@@ -27,21 +28,25 @@
     </thead>
     <tbody>
      
+    @foreach($registrosReservas as $registrosReservasLoop)
       <tr>
-        <th scope="row">01</th>
-        <td>119897-999</td>
-        <td>Samsung</td>
+        <th scope="row">{{$registrosReservasLoop->id}}</th>
+        <td>{{$registrosReservasLoop->nome}}</td>
+        <td>{{$registrosReservasLoop->funcao}}</td>
         <td>
           <a href="">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
-        xx
         <td>
-         xxx
+          <form method="post" action="{{route('apagar-reserva', $registrosReservasLoop->id)}}">
+            @method('delete')
+            @csrf
+            <button type="submit" class="btn btn-danger"> Deletar reserva </button>
+          </form>
         </td>
       </tr>
-   
+      @endforeach
     </tbody>
   </table>
 </section>
