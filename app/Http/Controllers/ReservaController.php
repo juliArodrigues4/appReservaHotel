@@ -28,10 +28,13 @@ class ReservaController extends Controller
             'dataEntrada'   => 'date|required',
             'dataSaida'     => 'date|required'
         ]);
+        
 
         Reserva::create($dadosValidos);
         return Redirect::route('home');
     }
+
+
 
     public function gerenciarReservas() {
         return view('gerenciarReservas');

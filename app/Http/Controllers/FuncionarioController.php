@@ -31,8 +31,8 @@ class FuncionarioController extends Controller
         
     }
 
-    public function mostrarGerenciarFuncionarioId(Funcionario $id){
-        return view('xxxx', ['registrosFuncionarios'=> $id]);
+    public function mostrarFuncionarioId(Funcionario $id){
+        return view('formAlterarFun', ['registrosFuncionarios'=> $id]);
     }
 
     public function gerenciarFuncionario(Request $request){
@@ -54,7 +54,7 @@ class FuncionarioController extends Controller
     public function alterarFuncionarioBanco(Funcionario $id, Request $request){
         $dadosValidos = $request->validate([
             'nome'    => 'string|required',
-            'funacao' => 'string|required'
+            'funcao' => 'string|required'
         ]);
 
         $id->fill($dadosValidos);

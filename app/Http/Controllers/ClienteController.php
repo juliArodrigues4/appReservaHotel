@@ -7,6 +7,7 @@ use App\Models\Cliente;
 use Illuminate\Support\Facades\Redirect;
 
 class ClienteController extends Controller
+
 {
     public function showHome() {
         return view("home");
@@ -32,8 +33,8 @@ class ClienteController extends Controller
         
     }
 
-    public function mostrarGerenciarClienteId(Cliente $id) {
-        return view('xxxxx', ['registrosClientes'=> $id]);
+    public function mostrarClienteId(Cliente $id) {
+        return view('formAlterarCliente', ['registrosClientes'=> $id]);
     }
 
     public function gerenciarCliente(Request $request){

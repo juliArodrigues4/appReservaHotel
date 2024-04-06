@@ -33,7 +33,7 @@
         <td>{{$registrosClientesLoop->nome}}</td>
         <td>{{$registrosClientesLoop->email}}</td>
         <td>
-          <a href="">
+          <a href="{{route('mostrar-cliente', $registrosClientesLoop->id)}}">
             <button type="button" class="btn btn-primary">X</button>
           </a>
         </td>
@@ -41,7 +41,7 @@
             <form method="post" action="{{route('apagar-cliente', $registrosClientesLoop->id)}}">
               @method('delete')
               @csrf
-              <button type="submit" class="btn btn-danger"> Deletar Cliente </button>
+              <button type="submit" class="btn btn-danger"> X </button>
             </form>
         </td>
       </tr>
